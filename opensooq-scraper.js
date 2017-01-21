@@ -4,7 +4,8 @@ import {range} from 'lodash';
 var fs      = require('fs');
 var cheerio = require('cheerio');
 var MongoClient = require('mongodb').MongoClient
-var url = 'mongodb://localhost:27017/scraper';
+//var url = 'mongodb://localhost:27017/scraper';
+var url = 'mongodb://abusafa:123@ds019063.mlab.com:19063/meteor';
 
 const {
   cat
