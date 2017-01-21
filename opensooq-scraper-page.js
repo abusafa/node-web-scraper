@@ -5,8 +5,8 @@ var fs      = require('fs');
 var cheerio = require('cheerio');
 var MongoClient = require('mongodb').MongoClient
 import {ObjectId} from 'mongodb'
-var url = 'mongodb://localhost:27017/scraper';
-
+//var url = 'mongodb://localhost:27017/scraper';
+var url = 'mongodb://abusafa:123@ds019063.mlab.com:19063/meteor';
 const {
   cat
 } = argv;
