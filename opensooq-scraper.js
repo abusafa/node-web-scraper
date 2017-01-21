@@ -52,7 +52,7 @@ MongoClient.connect(url, function(err, db) {
 
     });
   })
-  MongoClient.close();
+  //MongoClient.close();
   process.exit()
 
 
