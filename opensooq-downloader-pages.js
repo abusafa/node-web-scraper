@@ -4,7 +4,8 @@ import { argv } from 'optimist';
 import {range} from 'lodash';
 import Queue from 'bee-queue';
 var MongoClient = require('mongodb').MongoClient
-var url = 'mongodb://localhost:27017/scraper';
+//var url = 'mongodb://localhost:27017/scraper';
+var url = 'mongodb://abusafa:123@ds019063.mlab.com:19063/meteor';
 require('shelljs/global');
 var mkdirp = require('mkdirp');
 
