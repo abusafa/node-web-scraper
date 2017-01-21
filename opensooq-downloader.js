@@ -10,8 +10,7 @@ var mkdirp = require('mkdirp');
 var queue = new Queue('subtraction', {
   redis: {
     host: 'docker.yeslamo.com'
-  },
-  isWorker: false
+  }
 });
 
 
