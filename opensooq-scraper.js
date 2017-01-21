@@ -52,5 +52,8 @@ MongoClient.connect(url, function(err, db) {
 
     });
   })
+  MongoClient.close();
+  process.exit()
+
 
 })
