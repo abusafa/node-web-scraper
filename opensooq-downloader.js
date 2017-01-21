@@ -6,7 +6,13 @@ import Queue from 'bee-queue';
 require('shelljs/global');
 var mkdirp = require('mkdirp');
 
-var queue = new Queue('subtraction');
+//var queue = new Queue('subtraction');
+var queue = new Queue('subtraction', {
+  redis: {
+    host: 'docker.yeslamo.com'
+  },
+  isWorker: false
+});
 
 
 const {
