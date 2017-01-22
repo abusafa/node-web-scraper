@@ -28,21 +28,21 @@ MongoClient.connect(url, function(err, db) {
 
         data.each(function(){
           let d = $(this).find('a[data-role="chat-opener"]');
-          let title = d.attr('data-post-title').trim();
-          let person = d.attr('data-recipient-name').trim();
-          let pid = d.attr('data-pid').trim();
-          let price = d.attr('data-price').trim();
-          let image = d.attr('data-post-img').trim();
-          let link = 'https://jo.opensooq.com' + d.attr('data-post-href').trim();
+          let title = d.attr('data-post-title');
+          let person = d.attr('data-recipient-name');
+          let pid = d.attr('data-pid');
+          let price = d.attr('data-price');
+          let image = d.attr('data-post-img');
+          let link = 'https://jo.opensooq.com' + d.attr('data-post-href');
 
 
 
-          let location = $(this).find( "ul.rectCatesLinks li:nth-child(1)" ).text().trim()
+          let location = $(this).find( "ul.rectCatesLinks li:nth-child(1)" ).text()
 
           let tags = [];
           tags.push(location)
           $(this).find('.rectCatesLinks a').each(function(){
-            tags.push($(this).text().trim());
+            tags.push($(this).text());
           });
 
           Posts.insert({cat,title,pid,person,price, link,images:[image],location, tags})
