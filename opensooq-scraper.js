@@ -44,6 +44,7 @@ MongoClient.connect(url, function(err, db) {
   var Posts = db.collection('posts');
 
 	cats.map((o)=>{
+		console.log(o)
 		fs.readdir(`./public/${o}`, (err, files) => {
     files.forEach(file => {
       //console.log(file);
