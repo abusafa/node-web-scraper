@@ -60,7 +60,7 @@ MongoClient.connect(url, function(err, db) {
 
 	
 
-  let urls = Posts.find({},{limit:count}).toArray(function(err, docs) {
+  let urls = Posts.find({},{}).toArray(function(err, docs) {
     console.log(docs.length);
     docs.map((doc, key)=>{
       console.log(doc);
