@@ -12,7 +12,7 @@ var mkdirp = require('mkdirp');
 //var queue = new Queue('subtraction');
 var queue = new Queue('subtraction', {
   redis: {
-    host: '172.17.0.7'
+    host: '172.17.0.3'
   }
 });
 
