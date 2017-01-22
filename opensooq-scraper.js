@@ -7,9 +7,6 @@ var MongoClient = require('mongodb').MongoClient
 //var url = 'mongodb://localhost:27017/scraper';
 var url = 'mongodb://abusafa:123@ds019063.mlab.com:19063/meteor';
 
-const {
-  cat
-} = argv;
 
 let cats = [
 	"عقارات/شقق",
@@ -43,9 +40,9 @@ MongoClient.connect(url, function(err, db) {
 
   var Posts = db.collection('posts');
 
-	cats.map((o)=>{
+	cats.map((cat)=>{
 		console.log(o)
-		fs.readdir(`./public/${o}`, (err, files) => {
+		fs.readdir(`./public/${cat}`, (err, files) => {
     files.forEach(file => {
       //console.log(file);
 
