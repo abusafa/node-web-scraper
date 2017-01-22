@@ -79,7 +79,7 @@ MongoClient.connect(url, function(err, db) {
     });
   })
 
-		return o;
+		return cat;
 	})
 
   
