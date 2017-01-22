@@ -9,7 +9,12 @@ var url = 'mongodb://abusafa:123@ds019063.mlab.com:19063/meteor';
 require('shelljs/global');
 var mkdirp = require('mkdirp');
 
-var queue = new Queue('subtraction');
+//var queue = new Queue('subtraction');
+var queue = new Queue('subtraction', {
+  redis: {
+    host: '172.17.0.7'
+  }
+});
 
 const {
   cat, count=1
