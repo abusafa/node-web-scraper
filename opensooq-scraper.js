@@ -43,6 +43,7 @@ MongoClient.connect(url, function(err, db) {
 	cats.map((cat)=>{
 		console.log(cat)
 		fs.readdir(`./public/${cat}`, (err, files) => {
+		console.log(err)
     files.forEach(file => {
       //console.log(file);
 
