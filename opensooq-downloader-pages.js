@@ -74,7 +74,7 @@ MongoClient.connect(url, function(err, db) {
 
 
 queue.process(function (job, done) {
-	let j = `wget -q ${job.data.link} -O - ./public/temp/${job.data.cat}/${job.data._id}.html`
+	let j = `wget -q ${job.data.link} -O ./public/temp/${job.data.cat}/${job.data._id}.html`
   console.log(j);
 	setTimeout(()=>{
 		exec(j, function(code, stdout, stderr) {
